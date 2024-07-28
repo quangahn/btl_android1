@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Client.Post">
+
+    <LinearLayout
+        android:id="@+id/title_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Post"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_back"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="tiêu đề"
+        android:padding="10dp" />
+
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Tên sản phẩm"
+        android:layout_below="@+id/title"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp"
+
+        />
+
+    <Spinner
+        android:id="@+id/resturant_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Tên sản phẩm"
+            android:layout_below="@+id/category_spinner"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp"
+
+        />
+
+
+
+
+
+    <EditText
+        android:id="@+id/contents"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/resturant_spinner"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:gravity="top"
+        android:hint="contents"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contents"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/add_photos_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edit_text_background"
+            android:text="Add photos +"
+            android:textColor="@color/white"
+
+            />
+        <ImageView
+            android:id="@+id/imageDetail"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:background="@android:color/transparent"
+            android:padding="6dp"
+            android:layout_weight="1"
+            />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_button"
+            android:padding="6dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+</RelativeLayout>

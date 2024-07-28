@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Client.UpdateUser">
+
+    <TextView
+        android:id="@+id/tvRegisterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Edit Profile"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRegisterTitle"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_edit_text"
+        android:hint="user name"
+        android:inputType="text"
+        android:padding="16dp" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/email"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/etUsername"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:background="@drawable/rounded_edit_text"-->
+<!--        android:hint="email"-->
+<!--        android:inputType="text"-->
+<!--        android:padding="16dp" />-->
+
+    <ImageView
+        android:id="@+id/uploadImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/etUsername"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/icon_upload_image" />
+    <TextView
+        android:id="@+id/changePassword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/uploadImage"
+        android:layout_marginTop="32dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:text="change password"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+       <Button
+           android:id="@+id/btnCancel"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Cancel"
+           android:textColor="@color/black"
+           android:background="@android:color/transparent"
+           android:padding="6dp"
+           android:layout_weight="1"
+           />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_button"
+            android:padding="6dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
